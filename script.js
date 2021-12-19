@@ -16,23 +16,30 @@ function calculadora() {
     } else {
         function soma() {
             resultado = num1 + num2;
-            alert(`${num1} + ${num2} = ${resultado}`);                
         }
     }
     
     function comparaResultado () {
-        let resultado10 = 'menor';
-        let resultado20 = 'menor';
+        let resultado10 = 'menor que';
+        let resultado20 = 'menor que';
         const compara10 = resultado > 10;
         const compara20 = resultado > 20;
+        const igual10 = resultado == 10;
+        const igual20 = resultado == 20;
 
         if (compara10) {
-            resultado10 = 'maior'
+            resultado10 = 'maior que'
         }
         if (compara20) {
-            resultado20 = 'maior'
+            resultado20 = 'maior que'
         }
-        alert(`Sua soma é ${resultado}, que é ${resultado10} que 10 e ${resultado20} que 20.`)
+        if (igual10) {
+            resultado10 = 'igual a'
+        }
+        if (igual20) {
+            resultado20 = 'igual a'
+        }
+        alert(`Sua soma é ${resultado}, que é ${resultado10} 10 e ${resultado20} 20.`)
         novaOperacao();
     }
 
